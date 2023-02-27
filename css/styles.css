@@ -57,7 +57,7 @@ ul {
 }
 .navigation .link.current::after {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   display: block;
   content: "";
   width: 100%;
@@ -73,11 +73,16 @@ ul {
   color: var(--color-primary-dark);
   padding: 24px 0;
   display: block;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .navigation .link:hover {
   letter-spacing: 0.02em;
   color: var(--clr-button-on);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation .link.current {
+  letter-spacing: 0.02em;
+  color: var(--clr-button-on);
 }
 .page-addres {
   display: flex;
@@ -90,10 +95,11 @@ ul {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .page-addres .link:hover {
   color: var(--clr-button-on);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section {
   padding: 120px 0;
@@ -163,10 +169,11 @@ ul {
   background-color: var(--color-button-off);
   border: none;
   cursor: pointer;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .button-service:hover {
   background-color: var(--clr-button-on);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* advantages */
 .advanteges-list {
@@ -319,13 +326,13 @@ ul {
   justify-content: center;
   fill: var(--clr-background-dark);
   border-radius: 50%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .footer-socials-link:hover {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #31d0aa;
 }
 .footer-socials-link:focus {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #31d0aa;
 }
 .footer-socials-icon {
@@ -353,6 +360,8 @@ ul {
   border: 1px solid var(--color-wiete-foo);
   border-radius: 4px;
   font-family: "Roboto";
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .but-icon:hover {
   letter-spacing: 0.04em;
@@ -366,7 +375,6 @@ ul {
   line-height: 1.5;
   cursor: pointer;
   font-family: "Roboto";
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .but-icon:focus {
   letter-spacing: 0.04em;
@@ -380,7 +388,6 @@ ul {
   line-height: 1.5;
   cursor: pointer;
   font-family: "Roboto";
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border-text {
@@ -405,11 +412,12 @@ ul {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .portfolio-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* overlej */
 .overlej-image {
@@ -437,7 +445,7 @@ ul {
 .overlej-paragraf {
   font-size: 16px;
   line-height: 1.4;
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px 170px 32px;
   letter-spacing: 0.02em;
 
   color: var(--clr-background-dark);
@@ -541,14 +549,14 @@ ul {
   justify-content: center;
   fill: var(--clr-background-dark);
   border-radius: 50%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .socials-link:hover {
   background-color: var(--clr-button-on);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:focus {
   background-color: var(--clr-button-on);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-icon {
   width: 16px;
@@ -589,18 +597,18 @@ ul {
   fill: var(--color-customers);
   border: 1px solid var(--color-customers);
   border-radius: 4px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .customers-link:hover {
   fill: var(--clr-button-on);
   border: 1px solid var(--clr-button-on);
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:focus {
   fill: var(--clr-button-on);
   border: 1px solid var(--clr-button-on);
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -619,7 +627,8 @@ ul {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   padding: 20px 0px;
-  transition: opacity 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .beckdrop.is-hidden {
   opacity: 0;
@@ -650,16 +659,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .modal-close:hover {
   background: var(--clr-button-on);
   fill: var(--clr-background);
   cursor: pointer;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:focus {
   background: var(--clr-button-on);
   fill: var(--clr-background);
   cursor: pointer;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
